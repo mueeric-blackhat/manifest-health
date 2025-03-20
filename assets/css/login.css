@@ -1,0 +1,62 @@
+/* Fix alignment of Remember Me checkbox */
+.remember-me {
+    display: flex;
+    align-items: center;  /* Aligns items vertically */
+    gap: 0;  /* Adds space between checkbox and label */
+    margin-bottom: 15px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #003366; /* Dark blue theme */
+    margin: 0;
+}
+
+.remember-me label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+
+
+/* Improve alignment of input fields */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the login button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #002244;
+}

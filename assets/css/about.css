@@ -1,0 +1,292 @@
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 40px;
+}
+
+/* =======================
+   Navigation Bar Styling
+   ======================= */
+   header {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo */
+.nav-container h1 {
+    margin: 0;
+    flex: 1;
+}
+
+/* Navbar Links */
+.nav-container nav {
+    flex: 2;
+    text-align: center;
+}
+
+.nav-container nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-container nav a:hover {
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Login Button */
+.nav-container .login-btn {
+    padding: 10px 20px;
+    background-color: #1100ff;
+    color: #f5f7f8;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-container .login-btn:hover {
+    background-color: #094679; 
+    color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-container nav {
+        margin-top: 10px;
+    }
+
+    .nav-container nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-container .login-btn {
+        margin-top: 10px;
+    }
+}
+
+/* Sections */
+section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* History & Founder Sections */
+.history, .founder {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.history .image, .founder .image {
+    flex: 1;
+}
+
+.history .text, .founder .text {
+    flex: 2;
+}
+
+.history img, .founder img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Mission & Vision */
+.mission-vision {
+    text-align: center;
+}
+
+.mission-vision .content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.mission, .vision {
+    width: 45%;
+    padding: 20px;
+    background: #eaf4fc;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Core Values (Styled Containers) */
+.core-values {
+    text-align: center;
+}
+
+.core-values .content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.core-values .value {
+    width: 250px;
+    padding: 20px;
+    background: #eaf4fc;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.core-values .value:hover {
+    transform: translateY(-5px);
+}
+
+/* CEO Speech Section */
+.ceo-speech {
+    text-align: center;
+    padding: 40px;
+}
+
+.speech-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #eaf4fc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.speech-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.speech-content {
+    text-align: left;
+    max-width: 600px;
+}
+
+.speech-content h3 {
+    margin-bottom: 10px;
+    color: #0077b6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .speech-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* Team Section */
+.team {
+    text-align: center;
+    padding: 40px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.member {
+    text-align: center;
+    width: calc(33.33% - 30px); /* Three in a row */
+    background: #eaf4fc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Responsive: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .member {
+        width: calc(50% - 30px); /* Two in a row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .member {
+        width: 100%; /* One per row on small screens */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .history, .founder {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .history .image, .founder .image {
+        order: -1;
+    }
+
+    .mission-vision .content {
+        flex-direction: column;
+    }
+
+    .mission, .vision {
+        width: 100%;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}

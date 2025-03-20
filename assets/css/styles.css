@@ -1,0 +1,657 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(214, 220, 226);
+    color: #333;
+    padding-top: 20px;
+}
+
+header {
+    background-color: #002d72;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+/* =======================
+   Navigation Bar Styling
+   ======================= */
+   header {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo */
+.nav-container h1 {
+    margin: 0;
+    flex: 1;
+}
+
+/* Navbar Links */
+.nav-container nav {
+    flex: 2;
+    text-align: center;
+}
+
+.nav-container nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-container nav a:hover {
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Login Button */
+.nav-container .login-btn {
+    padding: 10px 20px;
+    background-color: #1100ff;
+    color: #f5f7f8;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-container .login-btn:hover {
+    background-color: #094679; 
+    color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-container nav {
+        margin-top: 10px;
+    }
+
+    .nav-container nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-container .login-btn {
+        margin-top: 10px;
+    }
+}
+/* Hero Section Styles */
+.hero-section {
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+}
+
+
+
+.search-form {
+    margin-top: 20px;
+}
+
+.search-form input {
+    padding: 5px;
+    width: 250px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    background-color: #ffc107;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mission, Vision, and Slogan Section */
+.mission-vision {
+    background-color:rgb(168, 172, 177); /* Background for the entire section */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.mission-vision .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;  /* Ensures items are in one row */
+    justify-content: space-between; /* Spacing between items */
+    align-items: stretch; /* Makes sure all boxes have equal height */
+    gap: 20px;
+}
+
+/* Styling for each section */
+.mission, .vision, .slogan {
+    background-color: #f4f4f4; /* Light grey for a clean look */
+    padding: 30px;  /* Reduced padding to prevent oversized sections */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    flex: 1; /* Ensures equal width */
+    min-width: 280px; /* Prevents shrinking too much */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.mission:hover, .vision:hover, .slogan:hover {
+    transform: translateY(-5px);
+}
+
+/* Styling for headings (smaller for balance) */
+.mission h2, .vision h2, .slogan h2 {
+    color: #003366; /* Dark blue */
+    font-size: 22px; /* Reduced from 24px */
+    margin-bottom: 10px;
+}
+
+/* Styling for text (consistent size) */
+.mission p, .vision p, .slogan p {
+    font-size: 15px; /* Reduced from 16px */
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Ensure it remains in one row on large screens but stacks on small screens */
+@media (max-width: 900px) {
+    .mission-vision .container {
+        flex-direction: column;
+    }
+}
+/* News Section Styles */
+.news-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color:rgb(136, 154, 161);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-section h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    flex: 1 1 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-card-content {
+    padding: 15px;
+    flex: 1;
+}
+
+.news-card h3 {
+    font-size: 18px;
+    color: #005eb8;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.news-card .news-date {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.news-card .read-more-btn {
+    margin-top: auto;
+    padding: 8px 12px;
+    background-color: #005eb8;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.news-card .read-more-btn:hover {
+    background-color: #004080;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Common Styles for Featured and Quick Sections */
+.section-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 2px solid #003366;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    color: #005eb8;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+.featured {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.featured-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.featured-card a {
+    display: inline-block;
+    color: #0056b3;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* News Section Styles */
+.news-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-section h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    flex: 1 1 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-card-content {
+    padding: 15px;
+    flex: 1;
+}
+
+.news-card h3 {
+    font-size: 18px;
+    color: #005eb8;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.news-card .news-date {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.news-card .read-more-btn {
+    margin-top: auto;
+    padding: 8px 12px;
+    background-color: #005eb8;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.news-card .read-more-btn:hover {
+    background-color: #004080;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonies Section with Flex Layout */
+.testimonies-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonies-section h2 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.testimonies-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimony-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 30%; /* Ensures 3 cards per row */
+    flex: 1 1 30%;
+    box-sizing: border-box;
+}
+
+.testimony-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.testimony-content {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.testimony-author {
+    font-weight: bold;
+    color: #005eb8;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #005eb8;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contact-info h3 {
+    color: #005eb8;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #005eb8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #004080;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #14528b;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-branches, .footer-links, .footer-contact {
+    flex: 1 1 30%;
+    padding: 10px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer p, .footer ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links ul, .footer-branches ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li, .footer-branches ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #004080;
+    font-size: 14px;
+}
